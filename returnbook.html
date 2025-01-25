@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Return Book</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Return Book</h1>
+    <p>Enter the details of the book you want to return:</p>
+
+    <form action="ReturnBookServlet" method="POST">
+        <label for="user_id">User ID:</label>
+        <input type="text" id="user_id" name="user_id" placeholder="Enter your User ID" required>
+
+        <label for="book_id">Book ID:</label>
+        <input type="text" id="book_id" name="book_id" placeholder="Enter the Book ID" required>
+
+        <label for="return_date">Return Date:</label>
+        <input type="date" id="return_date" name="return_date" required>
+
+        <button type="submit">Return Book</button>
+    </form>
+</body>
+</html>

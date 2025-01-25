@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Book</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://source.unsplash.com/1600x900/?library,shelves') no-repeat center center fixed;
+            background-size: cover;
+            color: #003366;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #form {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px 30px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #003366;
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #003366;
+            font-size: 1rem;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00509e;
+            transform: scale(1.05);
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #003366;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        a:hover {
+            background-color: #00509e;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div id="form">
+        <h2>Add New Book</h2>
+        <form action="AdminServlet" method="post">
+            <label for="title">Book Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required>
+
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="Fiction">Fiction</option>
+                <option value="Non-Fiction">Non-Fiction</option>
+                <option value="Science">Science</option>
+                <option value="History">History</option>
+                <option value="Technology">Technology</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Romantic">Romantic</option>
+            </select>
+
+            <label for="availability">Availability:</label>
+            <select id="availability" name="availability" required>
+                <option value="Available">Available</option>
+                <option value="Not Available">Not Available</option>
+            </select>
+
+            <label for="num_books">Number of Books Available:</label>
+            <input type="number" id="num_books" name="num_books" min="1" required>
+
+            <input type="submit" value="Add Book">
+        </form>
+        <a href="admindashboard.html">Back to Dashboard</a>
+    </div>
+</body>
+</html>

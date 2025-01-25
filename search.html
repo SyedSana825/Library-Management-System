@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Books</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://source.unsplash.com/1600x900/?library,books') no-repeat center center fixed;
+            background-size: cover;
+            color: #003366;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px 30px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #003366;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #003366;
+            font-size: 1rem;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00509e;
+            transform: scale(1.05);
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #003366;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        a:hover {
+            background-color: #00509e;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div id="form">
+        <h2>Search Books</h2>
+        <form action="BookServlet" method="get">
+            <label for="title">Search by Title:</label> 
+            <input type="text" id="title" name="title" placeholder="Enter book title"><br>
+            <input type="submit" value="Search">
+        </form>
+        <a href="userdashboard.html">Back to User Dashboard</a>
+    </div>
+</body>
+</html>

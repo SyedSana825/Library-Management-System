@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://source.unsplash.com/1600x900/?library,books,admin') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #dashboard {
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+            border-radius: 10px;
+            padding: 30px;
+            width: 400px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #ffcc00;
+        }
+
+        a {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #ffcc00;
+            color: black;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        a:hover {
+            background-color: #e6b800;
+            transform: scale(1.05);
+        }
+
+        a:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <div id="dashboard">
+        <h2>Admin Dashboard</h2>
+        <a href="addBook.html">Add New Book</a>
+        <a href="BookServlet">View Books</a>
+        <a href="updatebooks.html">Update Book</a>
+        <a href="deletebook.html">Delete Book</a>
+        <a href="logoutServlet">Logout</a>
+    </div>
+</body>
+</html>
